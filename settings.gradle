@@ -1,0 +1,3 @@
+//include ':java_plugin_gradle', ':android_lib_plugin_gradle', ':android_app_plugin_gradle'
+include ':com.android.tools.build.gradle-3.2.1'
+include ':com.android.tools.build.gradle-3.3.0'

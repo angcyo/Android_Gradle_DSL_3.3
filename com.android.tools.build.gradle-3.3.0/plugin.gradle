@@ -1,0 +1,43 @@
+//工程名 工程对应的class, 具体class
+
+project.afterEvaluate {
+    println '....afterEvaluate'
+}
+
+println '工程信息->'
+
+println project
+println project.class
+//org.gradle.api.internal.project.DefaultProject
+println '...end...'
+
+
+println '打印项目使用的所有插件->'
+project.getPlugins().findAll {
+    println it
+}
+
+println '...end...'
+
+/*
+*
+* org.gradle.api.plugins.HelpTasksPlugin@185e2c64
+com.android.build.gradle.api.AndroidBasePlugin@25fb2db7
+org.gradle.language.base.plugins.LifecycleBasePlugin@ced4a8c
+org.gradle.api.plugins.BasePlugin@6622cadf
+org.gradle.api.plugins.ReportingBasePlugin@273687db
+org.gradle.platform.base.plugins.ComponentBasePlugin@670ba22b
+org.gradle.language.base.plugins.LanguageBasePlugin@374e7edd
+org.gradle.platform.base.plugins.BinaryBasePlugin@19c5e088
+org.gradle.api.plugins.JavaBasePlugin@7f735cb2
+com.android.build.gradle.AppPlugin@3a197ad4
+org.jetbrains.kotlin.gradle.plugin.KotlinAndroidPluginWrapper@57a7e359
+org.jetbrains.kotlin.gradle.internal.AndroidExtensionsSubpluginIndicator@1ce59076
+*
+* android库插件
+* com.android.build.gradle.LibraryPlugin@39f80be2
+*
+* java 工程插件
+* org.gradle.api.plugins.JavaPlugin@28663407
+org.gradle.api.plugins.JavaLibraryPlugin@14b8ec2d
+* */
