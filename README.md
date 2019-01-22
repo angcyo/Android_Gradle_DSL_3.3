@@ -1,6 +1,9 @@
 # Android_Gradle_DSL_3.3
 gradle android dsl 3.3 源码分析
 
+>由于`Gradle`的源码过大 仓库不上传`src`
+>故. 请使用本地的`gradle`源码文件夹`src`, 复制粘贴到对应版本的目录下即可.
+
 # Gradle 源码所在路径
 **MAC**
 ```java
