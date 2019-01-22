@@ -20,6 +20,8 @@ android {
                 'src/gradle-4.10.1/src/base-services-groovy',
                 'src/gradle-4.10.1/src/logging',
                 'src/gradle-4.10.1/src/plugins',
+                'src/gradle-4.10.1/src/diagnostics',
+                'src/gradle-4.10.1/src/ide-native',
                 'src/gradle-4.10.1/src',
         ]
     }

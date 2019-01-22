@@ -20,6 +20,7 @@ android {
                 'src/gradle-4.6/src/base-services-groovy',
                 'src/gradle-4.6/src/logging',
                 'src/gradle-4.6/src/plugins',
+                'src/gradle-4.6/src/diagnostics',
                 'src/gradle-4.6/src',
         ]
     }
