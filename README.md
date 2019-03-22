@@ -128,6 +128,8 @@ private String outputFileName;
 OK, 修改点已经找到. 现在写代码修改.
 
 ```java
+android {
+    '''
     /*Gradle3.0 以上的方法*/
     applicationVariants.all { variant ->
         if (variant.buildType.name != "debug") {
@@ -163,6 +165,8 @@ OK, 修改点已经找到. 现在写代码修改.
                     ".apk"
         }
     }
+    ...
+}
 ```
 
 结束.
@@ -353,17 +357,21 @@ public TaskProvider<Zip> getPackageLibraryProvider() {
 
 **最终修改方式如下:**
 ```
-libraryVariants.all { variant ->
-    if (variant.buildType.name != "debug") {
-        variant.getPackageLibraryProvider().get().destinationDir = new File(project.rootDir.absolutePath + "/apk")
-    }
+android {
+    '''
+    libraryVariants.all { variant ->
+        if (variant.buildType.name != "debug") {
+            variant.getPackageLibraryProvider().get().destinationDir = new File(project.rootDir.absolutePath + "/apk")
+        }
 
-    variant.outputs.all { output -> r
-        output.apkData.outputFileName = ((project.name != "app") ? project.name : rootProject.name) + "-" +
-                defaultConfig.versionName + "_" +
-                variant.buildType.name + "_" +
-                ".aar"
+        variant.outputs.all { output -> 
+            output.apkData.outputFileName = ((project.name != "app") ? project.name : rootProject.name) + "-" +
+                    defaultConfig.versionName + "_" +
+                    variant.buildType.name +
+                    ".aar"
+        }
     }
+    ...
 }
 ```
 
